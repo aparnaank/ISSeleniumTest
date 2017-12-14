@@ -1,0 +1,58 @@
+2017-12-12 15:01:17,571 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2017-12-12 15:01:17,581 INFO o.a.j.JMeter: Loading user properties from: /home/aparna/jmeter/apache-jmeter-3.2/bin/user.properties
+2017-12-12 15:01:17,582 INFO o.a.j.JMeter: Loading system properties from: /home/aparna/jmeter/apache-jmeter-3.2/bin/system.properties
+2017-12-12 15:01:17,587 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2017-12-12 15:01:17,587 INFO o.a.j.JMeter: Version 3.2 r1790748
+2017-12-12 15:01:17,587 INFO o.a.j.JMeter: java.version=1.8.0_131
+2017-12-12 15:01:17,587 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2017-12-12 15:01:17,588 INFO o.a.j.JMeter: os.name=Linux
+2017-12-12 15:01:17,588 INFO o.a.j.JMeter: os.arch=amd64
+2017-12-12 15:01:17,588 INFO o.a.j.JMeter: os.version=3.16.0-4-amd64
+2017-12-12 15:01:17,588 INFO o.a.j.JMeter: file.encoding=UTF-8
+2017-12-12 15:01:17,588 INFO o.a.j.JMeter: Max memory     =4294967296
+2017-12-12 15:01:17,588 INFO o.a.j.JMeter: Available Processors =8
+2017-12-12 15:01:17,591 INFO o.a.j.JMeter: Default Locale=English (United States)
+2017-12-12 15:01:17,591 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2017-12-12 15:01:17,592 INFO o.a.j.JMeter: JMeterHome=/home/aparna/jmeter/apache-jmeter-3.2
+2017-12-12 15:01:17,592 INFO o.a.j.JMeter: user.dir  =/home/aparna/selenium/ISSeleniumTest
+2017-12-12 15:01:17,592 INFO o.a.j.JMeter: PWD       =/home/aparna/selenium/ISSeleniumTest
+2017-12-12 15:01:17,592 INFO o.a.j.JMeter: IP: 127.0.1.1 Name: ank-debian FullName: ank-debian
+2017-12-12 15:01:17,735 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: javax.swing.plaf.metal.MetalLookAndFeel [Metal, CrossPlatform]
+2017-12-12 15:01:17,738 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2017-12-12 15:01:18,141 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2017-12-12 15:01:18,141 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2017-12-12 15:01:23,865 INFO o.j.r.PluginManager: Plugins Status: [jpgc-graphs-basic=2.0, jpgc-graphs-additional=2.0, jpgc-ggl=2.0, jpgc-mergeresults=2.1, jpgc-plugins-manager=0.11, jmeter-core=3.2, jmeter-ftp=3.2, jmeter-http=3.2, jmeter-jdbc=3.2, jmeter-jms=3.2, jmeter-junit=3.2, jmeter-java=3.2, jmeter-ldap=3.2, jmeter-mail=3.2, jmeter-mongodb=3.2, jmeter-native=3.2, jmeter-tcp=3.2, jmeter-components=3.2]
+2017-12-12 15:01:24,333 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.assertions.BSFAssertion
+2017-12-12 15:01:24,548 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.extractor.BSFPostProcessor
+2017-12-12 15:01:24,573 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.modifiers.BSFPreProcessor
+2017-12-12 15:01:24,596 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-12-12 15:01:24,596 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-12-12 15:01:24,596 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-12-12 15:01:24,596 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-12-12 15:01:24,596 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2017-12-12 15:01:24,596 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2017-12-12 15:01:24,781 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2017-12-12 15:01:24,781 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /home/aparna/jmeter/apache-jmeter-3.2/bin/proxyserver.jks
+2017-12-12 15:01:24,899 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.protocol.java.sampler.BSFSampler
+2017-12-12 15:01:24,927 INFO o.a.j.s.FileServer: Default base='/home/aparna/selenium/ISSeleniumTest'
+2017-12-12 15:01:24,996 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.protocol.mongodb.config.MongoSourceElement
+2017-12-12 15:01:24,996 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.protocol.mongodb.sampler.MongoScriptSampler
+2017-12-12 15:01:25,087 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.timers.BSFTimer
+2017-12-12 15:01:25,106 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.visualizers.BSFListener
+2017-12-12 15:01:25,214 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2017-12-12 15:01:25,214 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2017-12-12 15:01:25,214 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2017-12-12 15:01:25,215 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2017-12-12 15:01:43,359 INFO o.a.j.g.a.Load: Loading file: /home/aparna/Downloads/WSO2-Updated.jmx
+2017-12-12 15:01:43,360 INFO o.a.j.s.FileServer: Set new base='/home/aparna/Downloads'
+2017-12-12 15:01:43,460 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2017-12-12 15:01:43,463 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2017-12-12 15:01:43,464 INFO o.a.j.s.SaveService: Using SaveService properties version 3.2
+2017-12-12 15:01:43,466 INFO o.a.j.s.SaveService: Loading file: /home/aparna/Downloads/WSO2-Updated.jmx
+2017-12-12 15:01:43,488 INFO o.a.j.p.h.c.CacheManager: Will only cache the following methods: [GET]
+2017-12-12 15:01:43,489 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2017-12-12 15:01:43,493 INFO o.a.j.u.NameUpdater: Upgrading class org.apache.jmeter.protocol.http.sampler.SoapSampler to org.apache.jmeter.config.ConfigTestElement
+2017-12-12 15:01:43,493 INFO o.a.j.u.NameUpdater: Upgrading class org.apache.jmeter.protocol.http.control.gui.SoapSamplerGui to org.apache.jmeter.config.gui.ObsoleteGui
+2017-12-12 15:01:43,496 INFO o.a.j.u.NameUpdater: Upgrading class org.apache.jmeter.protocol.http.control.gui.SoapSamplerGui to org.apache.jmeter.config.gui.ObsoleteGui
+2017-12-12 15:01:43,498 INFO o.a.j.u.NameUpdater: Upgrading class org.apache.jmeter.protocol.http.control.gui.SoapSamplerGui to org.apache.jmeter.config.gui.ObsoleteGui
+2017-12-12 15:01:43,608 INFO o.a.j.s.FileServer: Set new base='/home/aparna/Downloads'
