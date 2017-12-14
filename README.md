@@ -1,6 +1,6 @@
-#IS Selenium Test
+## IS Selenium Test
 
-## Covered Features
+### Covered Features
 	- Login 
 	- SP creation
 	- IDP creation
