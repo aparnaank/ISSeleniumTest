@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3734680b-d399-40d2-a4d3-689914dc8538" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Tests/testng-failed.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-org.ank.IStest.UserManagementTestCase.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/ank/IStest/IsHomeTestCase.class" afterPath="$PROJECT_DIR$/target/test-classes/org/ank/IStest/IsHomeTestCase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/ank/IStest/IsLoginTestCase.class" afterPath="$PROJECT_DIR$/target/test-classes/org/ank/IStest/IsLoginTestCase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/org/ank/IStest/UserManagementTestCase.class" afterPath="$PROJECT_DIR$/target/test-classes/org/ank/IStest/UserManagementTestCase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/ank/IStest/IsHomeTestCase.java" afterPath="$PROJECT_DIR$/src/test/java/org/ank/IStest/IsHomeTestCase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/ank/IStest/IsLoginTestCase.java" afterPath="$PROJECT_DIR$/src/test/java/org/ank/IStest/IsLoginTestCase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/Tests/Test1.html" afterPath="$PROJECT_DIR$/target/surefire-reports/Tests/Test1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/Tests/Test1.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/Tests/Test1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-org.ank.IStest.IsHomeTestCase.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-org.ank.IStest.IsHomeTestCase.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-org.ank.IStest.IsLoginTestCase.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-org.ank.IStest.IsLoginTestCase.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Tests/classes.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Tests/classes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Tests/methods-alphabetical.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Tests/methods-alphabetical.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Tests/methods.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Tests/methods.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Tests/testng.xml.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Tests/testng.xml.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Tests/toc.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Tests/toc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/index.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/testng.xml" afterPath="$PROJECT_DIR$/target/test-classes/testng.xml" />
-    </list>
+    <list default="true" id="3734680b-d399-40d2-a4d3-689914dc8538" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
