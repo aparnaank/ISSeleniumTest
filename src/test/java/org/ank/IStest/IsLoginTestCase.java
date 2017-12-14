@@ -2,6 +2,8 @@ package org.ank.IStest;
 
 import java.util.concurrent.TimeUnit;
 
+import com.gargoylesoftware.htmlunit.BrowserVersion;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -28,6 +30,7 @@ public class IsLoginTestCase {
     System.setProperty("webdriver.chrome.driver", Util.CHROME_PATH);
 //    driver = new FirefoxDriver();
     driver =new ChromeDriver();
+//    driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
     baseUrl = Util.BASE_URL;
     driver.manage().timeouts().implicitlyWait(Util.WAIT_TIME, TimeUnit.SECONDS);
     }

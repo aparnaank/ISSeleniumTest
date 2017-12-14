@@ -6,7 +6,7 @@
     <classes>
         <class name="org.ank.IStest.IsHomeTestCase"/>
         <class name="org.ank.IStest.IsLoginTestCase"/>
-        <class name="org.ank.IStest.UserManagementTestCase"/>
+        <!-- class name="org.ank.IStest.UserManagementTestCase"/ -->
     </classes>
   </test>  
 </suite>

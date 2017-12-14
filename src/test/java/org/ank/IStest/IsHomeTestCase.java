@@ -3,7 +3,9 @@ package org.ank.IStest;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 
+import com.gargoylesoftware.htmlunit.BrowserVersion;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
@@ -24,8 +26,9 @@ public class IsHomeTestCase {
   public void setUp() throws Exception {
 
       System.setProperty("webdriver.chrome.driver", Util.CHROME_PATH);
-//    driver = new FirefoxDriver();
+//      driver = new FirefoxDriver();
       driver =new ChromeDriver();
+//      driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
       baseUrl = Util.BASE_URL;
       driver.manage().timeouts().implicitlyWait(Util.WAIT_TIME, TimeUnit.SECONDS);
   }
