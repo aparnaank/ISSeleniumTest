@@ -4,12 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.*;
-
+import static org.testng.Assert.*;
 import java.util.concurrent.TimeUnit;
 
-import static org.testng.Assert.*;
+import org.ank.IStest.Utils.*;
 
 /**
  * Created by aparna on 12/12/17.
@@ -22,19 +21,19 @@ public class UserManagementTestCase {
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
 
-        System.setProperty("webdriver.chrome.driver", Util.CHROME_PATH);
+        System.setProperty("webdriver.chrome.driver", BrowserPath.CHROME_PATH);
         driver =new ChromeDriver();
-        baseUrl = Util.BASE_URL;
-        driver.manage().timeouts().implicitlyWait(Util.WAIT_TIME, TimeUnit.SECONDS);
+        baseUrl = Utils.BASE_URL;
+        driver.manage().timeouts().implicitlyWait(Utils.WAIT_TIME, TimeUnit.SECONDS);
     }
 
     @Test (priority = 0)
     public void testISLogin() throws Exception {
         driver.get(baseUrl + "/carbon/admin/login.jsp");
         driver.findElement(By.id("txtPassword")).clear();
-        driver.findElement(By.id("txtPassword")).sendKeys(Util.USER_NAME);
+        driver.findElement(By.id("txtPassword")).sendKeys(Utils.USER_NAME);
         driver.findElement(By.id("txtUserName")).clear();
-        driver.findElement(By.id("txtUserName")).sendKeys(Util.PASSWORD);
+        driver.findElement(By.id("txtUserName")).sendKeys(Utils.PASSWORD);
         driver.findElement(By.cssSelector("input.button")).click();
 
         Thread.sleep(2000);
@@ -45,21 +44,19 @@ public class UserManagementTestCase {
         driver.findElement(By.linkText("Add")).click();
         driver.findElement(By.linkText("Add New Role")).click();
         driver.findElement(By.name("roleName")).clear();
-        driver.findElement(By.name("roleName")).sendKeys(Util.NEWROLENAME);
+        driver.findElement(By.name("roleName")).sendKeys(Utils.NEWROLENAME);
         driver.findElement(By.cssSelector("input.button")).click();
         driver.findElement(By.cssSelector("#ygtvcheck2 > div.ygtvspacer")).click();
         driver.findElement(By.cssSelector("input.button")).click();
         driver.findElement(By.cssSelector("td.buttonRow > input.button")).click();
 
-        String EXPECT_CONF_MSG = "Role PRIMARY/"+Util.NEWROLENAME+" is added successfully.";
+        String EXPECT_CONF_MSG = "Role PRIMARY/"+ Utils.NEWROLENAME+" is added successfully.";
         String ACTUAL_CONF_MSG = driver.findElement(By.cssSelector("#messagebox-info > p")).getText();
-        System.out.println("MSG 1===============================" + ACTUAL_CONF_MSG);
 
         driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
 
-        String createdRole = driver.findElement(By.xpath("//table[@id='roleTable']/tbody/tr[4]/td")).getText();
-        System.out.println("MSG 2===============================" + createdRole);
-        assertEquals(createdRole,Util.NEWROLENAME);
+        String createdRole = driver.findElement(By.xpath("//table[@id='roleTable']/tbody/tr[3]/td")).getText();
+        assertEquals(createdRole, Utils.NEWROLENAME);
     }
 
     @Test (dependsOnMethods = "testISLogin",priority = 2)
@@ -67,24 +64,40 @@ public class UserManagementTestCase {
         driver.findElement(By.linkText("Add")).click();
         driver.findElement(By.linkText("Add New User")).click();
         driver.findElement(By.name("username")).clear();
-        driver.findElement(By.name("username")).sendKeys(Util.NEWUSER);
+        driver.findElement(By.name("username")).sendKeys(Utils.NEWUSER);
         driver.findElement(By.id("password")).clear();
-        driver.findElement(By.id("password")).sendKeys(Util.NEWUSER);
+        driver.findElement(By.id("password")).sendKeys(Utils.NEWUSER);
         driver.findElement(By.id("password-repeat")).clear();
-        driver.findElement(By.id("password-repeat")).sendKeys(Util.NEWUSER);
+        driver.findElement(By.id("password-repeat")).sendKeys(Utils.NEWUSER);
         driver.findElement(By.cssSelector("input.button")).click();
         // ERROR: Caught exception [Error: Dom locators are not implemented yet!]
         driver.findElement(By.cssSelector("td.buttonRow > input.button")).click();
 
-        String EXPECT_CONF_MSG = "User PRIMARY/"+Util.NEWUSER+" is added successfully.";
+        String EXPECT_CONF_MSG = "User PRIMARY/"+ Utils.NEWUSER+" is added successfully.";
         String ACTUAL_CONF_MSG = driver.findElement(By.cssSelector("#messagebox-info > p")).getText();
         assertEquals(ACTUAL_CONF_MSG,EXPECT_CONF_MSG);
         driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
 
-        String createdUser = driver.findElement(By.xpath("//table[@id='userTable']/tbody/tr[4]/td")).getText();
-        System.out.println("MSG ==============================="+createdUser);
-        assertEquals(createdUser, Util.NEWUSER);
+        String createdUser = driver.findElement(By.xpath("//table[@id='userTable']/tbody/tr[2]/td")).getText();
+        assertEquals(createdUser, Utils.NEWUSER);
         driver.findElement(By.linkText("List")).click();
+
+    }
+
+    public void userLogin() throws Exception {
+        driver.findElement(By.cssSelector("img")).click();
+        driver.findElement(By.linkText("Sign-out")).click();
+
+        driver.findElement(By.id("txtUserName")).clear();
+        driver.findElement(By.id("txtUserName")).sendKeys(Utils.NEWUSER);
+        driver.findElement(By.id("txtPassword")).clear();
+        driver.findElement(By.id("txtPassword")).sendKeys(Utils.NEWUSER);
+        driver.findElement(By.cssSelector("input.button")).click();
+
+        String isTitle = driver.getTitle();
+        assertEquals(isTitle,Messages.EXPECT_IAM_TITLE );
+
+        driver.findElement(By.linkText("Sign-out")).click();
     }
 
     @AfterClass(alwaysRun = true)

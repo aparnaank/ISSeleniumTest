@@ -2,16 +2,14 @@ package org.ank.IStest;
 
 import java.util.concurrent.TimeUnit;
 
-import com.gargoylesoftware.htmlunit.BrowserVersion;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
+import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 //import org.openqa.selenium.firefox.FirefoxDriver;
 import  org.openqa.selenium.chrome.ChromeDriver;
+import org.ank.IStest.Utils.*;
 
-import static org.testng.Assert.*;
 
 /**
  * Created by aparna on 11/29/17.
@@ -27,12 +25,12 @@ public class IsLoginTestCase {
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
 
-    System.setProperty("webdriver.chrome.driver", Util.CHROME_PATH);
+    System.setProperty("webdriver.chrome.driver",BrowserPath.CHROME_PATH);
 //    driver = new FirefoxDriver();
     driver =new ChromeDriver();
 //    driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
-    baseUrl = Util.BASE_URL;
-    driver.manage().timeouts().implicitlyWait(Util.WAIT_TIME, TimeUnit.SECONDS);
+    baseUrl = Utils.BASE_URL;
+    driver.manage().timeouts().implicitlyWait(Utils.WAIT_TIME, TimeUnit.SECONDS);
     }
 
 
@@ -40,13 +38,13 @@ public class IsLoginTestCase {
     public void testInvalidPasswdLogin() throws Exception {
         driver.get(baseUrl + "/carbon/admin/login.jsp");
         driver.findElement(By.id("txtUserName")).clear();
-        driver.findElement(By.id("txtUserName")).sendKeys(Util.USER_NAME);
+        driver.findElement(By.id("txtUserName")).sendKeys(Utils.USER_NAME);
         driver.findElement(By.id("txtPassword")).clear();
         driver.findElement(By.id("txtPassword")).sendKeys("qazx");
         driver.findElement(By.cssSelector("input.button")).click();
         Thread.sleep(2000);
         String invalidLoginErrMsg = driver.findElement(By.cssSelector("#messagebox-warning > p")).getText();
-        Assert.assertEquals(invalidLoginErrMsg,Util.EXPECT_INVALID_LOGIN_ERROR);
+        Assert.assertEquals(invalidLoginErrMsg, Messages.EXPECT_INVALID_LOGIN_ERROR);
         driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
 
     }
@@ -59,11 +57,11 @@ public class IsLoginTestCase {
         driver.findElement(By.id("txtUserName")).clear();
         driver.findElement(By.id("txtUserName")).sendKeys("qwert");
         driver.findElement(By.id("txtPassword")).clear();
-        driver.findElement(By.id("txtPassword")).sendKeys(Util.PASSWORD);
+        driver.findElement(By.id("txtPassword")).sendKeys(Utils.PASSWORD);
         driver.findElement(By.cssSelector("input.button")).click();
         Thread.sleep(2000);
         String invalidLoginErrMsg = driver.findElement(By.cssSelector("#messagebox-warning > p")).getText();
-        Assert.assertEquals(invalidLoginErrMsg,Util.EXPECT_INVALID_LOGIN_ERROR);
+        Assert.assertEquals(invalidLoginErrMsg, Messages.EXPECT_INVALID_LOGIN_ERROR);
         driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
     }
 
@@ -79,7 +77,7 @@ public class IsLoginTestCase {
         driver.findElement(By.cssSelector("input.button")).click();
         Thread.sleep(2000);
         String invalidLoginErrMsg = driver.findElement(By.cssSelector("#messagebox-warning > p")).getText();
-        Assert.assertEquals(invalidLoginErrMsg,Util.EXPECT_INVALID_LOGIN_ERROR);
+        Assert.assertEquals(invalidLoginErrMsg, Messages.EXPECT_INVALID_LOGIN_ERROR);
         driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
     }
 

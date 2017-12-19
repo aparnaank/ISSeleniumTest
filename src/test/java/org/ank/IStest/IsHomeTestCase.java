@@ -1,18 +1,16 @@
 package org.ank.IStest;
 
-import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 
-import com.gargoylesoftware.htmlunit.BrowserVersion;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 //import org.openqa.selenium.firefox.FirefoxDriver;
 import  org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
+
+import org.ank.IStest.Utils.*;
 
 
 public class IsHomeTestCase {
@@ -25,21 +23,21 @@ public class IsHomeTestCase {
   @BeforeClass(alwaysRun = true)
   public void setUp() throws Exception {
 
-      System.setProperty("webdriver.chrome.driver", Util.CHROME_PATH);
+      System.setProperty("webdriver.chrome.driver", BrowserPath.CHROME_PATH);
 //      driver = new FirefoxDriver();
       driver =new ChromeDriver();
 //      driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
-      baseUrl = Util.BASE_URL;
-      driver.manage().timeouts().implicitlyWait(Util.WAIT_TIME, TimeUnit.SECONDS);
+      baseUrl = Utils.BASE_URL;
+      driver.manage().timeouts().implicitlyWait(Utils.WAIT_TIME, TimeUnit.SECONDS);
   }
 
   @Test (priority = 0)
   public void testISLogin() throws Exception {
     driver.get(baseUrl + "/carbon/admin/login.jsp");
     driver.findElement(By.id("txtPassword")).clear();
-    driver.findElement(By.id("txtPassword")).sendKeys(Util.USER_NAME);
+    driver.findElement(By.id("txtPassword")).sendKeys(Utils.USER_NAME);
     driver.findElement(By.id("txtUserName")).clear();
-    driver.findElement(By.id("txtUserName")).sendKeys(Util.PASSWORD);
+    driver.findElement(By.id("txtUserName")).sendKeys(Utils.PASSWORD);
     driver.findElement(By.cssSelector("input.button")).click();
 
     Thread.sleep(2000);
@@ -50,7 +48,7 @@ public class IsHomeTestCase {
   public void verifyHomepage(){
 
       String headerTitle = driver.findElement(By.xpath("//div[@id='middle']/h2")).getText();
-      Assert.assertEquals(headerTitle,Util.EXPECT_TITLE);
+      Assert.assertEquals(headerTitle, Messages.EXPECT_TITLE);
   }
 
   @Test (dependsOnMethods = "testISLogin",priority = 2)
@@ -68,9 +66,9 @@ public class IsHomeTestCase {
       Thread.sleep(2000);
       driver.findElement(By.id("saml_link")).click();
       driver.findElement(By.id("issuer")).clear();
-      driver.findElement(By.id("issuer")).sendKeys(Util.ISSUER);
+      driver.findElement(By.id("issuer")).sendKeys(TravelocitySP.ISSUER);
       driver.findElement(By.id("assertionConsumerURLTxt")).clear();
-      driver.findElement(By.id("assertionConsumerURLTxt")).sendKeys(Util.ASSERTION_CONSUMER_URL);
+      driver.findElement(By.id("assertionConsumerURLTxt")).sendKeys(TravelocitySP.ASSERTION_CONSUMER_URL);
       driver.findElement(By.id("addAssertionConsumerURLBtn")).click();
       driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
       driver.findElement(By.name("enableResponseSignature")).click();
@@ -106,11 +104,11 @@ public class IsHomeTestCase {
         driver.findElement(By.linkText("Google Configuration")).click();
         driver.findElement(By.id("GoogleOIDCAuthenticator_Enabled")).click();
         driver.findElement(By.id("cust_auth_prop_GoogleOIDCAuthenticator#ClientId")).clear();
-        driver.findElement(By.id("cust_auth_prop_GoogleOIDCAuthenticator#ClientId")).sendKeys(Util.GOOGLE_CLIENT_ID);
+        driver.findElement(By.id("cust_auth_prop_GoogleOIDCAuthenticator#ClientId")).sendKeys(GoogleIDP.GOOGLE_CLIENT_ID);
         driver.findElement(By.id("cust_auth_prop_GoogleOIDCAuthenticator#ClientSecret")).clear();
-        driver.findElement(By.id("cust_auth_prop_GoogleOIDCAuthenticator#ClientSecret")).sendKeys(Util.GOOGLE_CLIENT_SECRET);
+        driver.findElement(By.id("cust_auth_prop_GoogleOIDCAuthenticator#ClientSecret")).sendKeys(GoogleIDP.GOOGLE_CLIENT_SECRET);
         driver.findElement(By.id("cust_auth_prop_GoogleOIDCAuthenticator#callbackUrl")).clear();
-        driver.findElement(By.id("cust_auth_prop_GoogleOIDCAuthenticator#callbackUrl")).sendKeys(Util.CALL_BACK_URL);
+        driver.findElement(By.id("cust_auth_prop_GoogleOIDCAuthenticator#callbackUrl")).sendKeys(GoogleIDP.CALL_BACK_URL);
         driver.findElement(By.cssSelector("div.buttonRow > input[type=\"button\"]")).click();
 
         driver.findElement(By.cssSelector("img")).click();
@@ -124,7 +122,7 @@ public class IsHomeTestCase {
         Thread.sleep(4000);
         driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
         String emptySpList = driver.findElement(By.cssSelector("i")).getText();
-        assertEquals(emptySpList,Util.EXPECT_EMPTY_SP_LIST);
+        assertEquals(emptySpList, TravelocitySP.EXPECT_EMPTY_SP_LIST);
 
         driver.findElement(By.cssSelector("img")).click();
     }
@@ -137,7 +135,7 @@ public class IsHomeTestCase {
         driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
         Thread.sleep(2000);
         String emptyIdpList = driver.findElement(By.cssSelector("i")).getText();
-        assertEquals(emptyIdpList,Util.EXPECT_EMPTY_IDP_LIST);
+        assertEquals(emptyIdpList, GoogleIDP.EXPECT_EMPTY_IDP_LIST);
 
         driver.findElement(By.cssSelector("img")).click();
     }
