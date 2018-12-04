@@ -40,15 +40,12 @@ public class Utils {
         public static final String EXPECT_EMPTY_SP_LIST = "No Service Providers registered";
     }
 
-
     public static final class GoogleIDP {
         public static final String GOOGLE_CLIENT_ID = "34901453018-ckvpj407i7gigvip69961nud9ko28bvq.apps.googleusercontent.com";
         public static final String GOOGLE_CLIENT_SECRET = "clKhaedjxS2sc_xL1tetCHw0";
         public static final String CALL_BACK_URL = "https://localhost:9443/commonauth";
         public static final String EXPECT_EMPTY_IDP_LIST = "No Identity Providers registered";
     }
-
-
 
     public static final String NEWROLENAME = "testRole";
     public static final String NEWUSER = "testUser";
@@ -57,6 +54,4 @@ public class Utils {
 //    public static final String FILE_PATH = "testData.xls"; // File Path
 //    public static final String SHEET_NAME = "Data"; // Sheet name
 //    public static final String TABLE_NAME = "testData"; // Name of data table
-
-
 }
