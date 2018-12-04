@@ -27,12 +27,11 @@ public class IsLoginTestCase {
 
     System.setProperty("webdriver.chrome.driver",BrowserPath.CHROME_PATH);
 //    driver = new FirefoxDriver();
-    driver =new ChromeDriver();
+    driver = new ChromeDriver();
 //    driver = new HtmlUnitDriver(BrowserVersion.CHROME, true);
     baseUrl = Utils.BASE_URL;
     driver.manage().timeouts().implicitlyWait(Utils.WAIT_TIME, TimeUnit.SECONDS);
     }
-
 
     @Test (priority = 0, description = "Invalid password")
     public void testInvalidPasswdLogin() throws Exception {
@@ -46,9 +45,7 @@ public class IsLoginTestCase {
         String invalidLoginErrMsg = driver.findElement(By.cssSelector("#messagebox-warning > p")).getText();
         Assert.assertEquals(invalidLoginErrMsg, Messages.EXPECT_INVALID_LOGIN_ERROR);
         driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
-
     }
-
 
     @Test (priority = 1, description = "Invalid username")
     public void testInvalidUsernameLogin() throws Exception {
@@ -65,7 +62,6 @@ public class IsLoginTestCase {
         driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
     }
 
-
     @Test (priority = 2, description = "Invalid username & password")
     public void testInvalidBothLogin() throws Exception {
 
@@ -80,7 +76,6 @@ public class IsLoginTestCase {
         Assert.assertEquals(invalidLoginErrMsg, Messages.EXPECT_INVALID_LOGIN_ERROR);
         driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
     }
-
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
